@@ -24,9 +24,9 @@ public class User {
     private String firstName;
     private String lastName;
     private String telegramId;
-    @ManyToMany
+    /*@ManyToMany
             //EAGER все связанные сущности сразу извлекаем
             //LAZY при обращении вытягивает сущности
             //проблема N+1
-    List<Page> pages;
+    List<Page> pages;*/
 }

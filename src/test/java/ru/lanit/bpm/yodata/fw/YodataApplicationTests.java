@@ -5,22 +5,21 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import ru.lanit.bpm.yodata.app.repo.UserRepository;
+import ru.lanit.bpm.yodata.app.repo.UserRepositoryCustom;
+import ru.lanit.bpm.yodata.domain.ParsingResults;
 import ru.lanit.bpm.yodata.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @SpringBootTest(classes = YodataApplication.class)
 class YodataApplicationTests {
-/*    @Autowired
-    UserRepository userRepository;*/
+    @Autowired
+    UserRepository userRepository;
 
     @Test
     void contextLoads() {
-/*
-        List<User> tolybayeva = userRepository.findByFirstName("tolybayeva");
-        log.info(tolybayeva.toString());
-
-*/
+        userRepository.findUsers();
     }
 }

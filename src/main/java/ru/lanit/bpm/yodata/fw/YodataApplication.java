@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EntityScan(basePackages = "ru.lanit.bpm.yodata.domain")
 @ComponentScan(basePackages = "ru.lanit.bpm.yodata")
-@EnableJpaRepositories(basePackages = "ru.lanit.bpm.yodata.app.repo")
+@EnableJpaRepositories(basePackages = "ru.lanit.bpm.yodata")
 public class YodataApplication {
 
     public static void main(String[] args) {

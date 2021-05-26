@@ -23,7 +23,7 @@ public class ParsingResults {
     @ManyToOne
     @JoinColumn(name="page_id")
     private Page page;
-    private Instant parsingDateTime;
+    private String parsingDateTime;
     private String result;
     private boolean sent;
 }
