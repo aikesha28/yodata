@@ -28,12 +28,16 @@ values (1, 'page1', 'url1', 'xpath1'),
        (2, 'page2', 'url2', 'xpath2'),
        (3, 'page3', 'url3', 'xpath3');
 
+
+CREATE SEQUENCE sq_pages_id START WITH 4 INCREMENT BY 1;
 CREATE TABLE subscription
 (
     id      BIGINT primary key,
     page_id BIGINT      not null,
     user_id varchar(50) not null
 );
+
+CREATE SEQUENCE sq_subscription_id START WITH 10 INCREMENT BY 1;
 
 INSERT INTO subscription
 values (1, 1, 'tolybayeva'),

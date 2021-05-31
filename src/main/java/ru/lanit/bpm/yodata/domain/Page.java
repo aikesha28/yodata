@@ -6,10 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,10 +17,16 @@ import javax.persistence.Table;
 @Table(name = "page")
 public class Page {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_pages_id")
+    @SequenceGenerator(name="sq_pages_id",allocationSize = 1)
     private Long id;
     private String name;
     private String url;
     private String parsingXPath;
 
+    public Page(String name, String url, String parsingXPath) {
+        this.name=name;
+        this.url=url;
+        this.parsingXPath=parsingXPath;
+    }
 }

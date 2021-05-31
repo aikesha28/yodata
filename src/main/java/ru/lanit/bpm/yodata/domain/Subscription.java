@@ -21,8 +21,13 @@ public class Subscription {
     private Long id;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User name;
+    private User user;
     @ManyToOne
     @JoinColumn(name = "page_id")
     private Page page;
+
+    public Subscription(User user, Page page) {
+        this.page=page;
+        this.user=user;
+    }
 }
